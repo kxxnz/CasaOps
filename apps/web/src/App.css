@@ -7,22 +7,69 @@
   min-height: 100vh;
   place-content: center;
   padding: 2rem;
-  text-align: center;
 }
 
-.app__label {
+.status-card {
+  width: min(32rem, 100%);
+  padding: 2rem;
+  border: 1px solid #d9e2da;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 1rem 3rem rgba(26, 58, 31, 0.08);
+}
+
+.status-card__label {
+  margin: 0 0 0.5rem;
   color: #2f7d32;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.app h1 {
+.status-card h1 {
   margin: 0;
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 3rem);
 }
 
-.app p:last-child {
-  max-width: 36rem;
-  color: #556158;
+.status-card__status {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  margin: 1.5rem 0;
+  color: #445148;
+}
+
+.indicator {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 50%;
+  background: #9aa49c;
+}
+
+.indicator--online {
+  background: #2f9e44;
+  box-shadow: 0 0 0 0.25rem #e4f5e7;
+}
+
+.status-card__details {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.status-card__details div {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e6ebe7;
+}
+
+.status-card__details dt {
+  color: #68736b;
+}
+
+.status-card__details dd {
+  margin: 0;
+  font-weight: 600;
 }
