@@ -1,0 +1,28 @@
+#root {
+  min-height: 100vh;
+}
+
+.app {
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.app__label {
+  color: #2f7d32;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.app h1 {
+  margin: 0;
+  font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.app p:last-child {
+  max-width: 36rem;
+  color: #556158;
+}

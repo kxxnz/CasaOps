@@ -1,0 +1,25 @@
+{
+  "name": "casaops",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Monitoramento e automação da rede doméstica.",
+  "workspaces": [
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=24.0.0",
+    "npm": ">=11.0.0"
+  },
+  "scripts": {
+    "dev:api": "npm run start:dev --workspace=@casaops/api",
+    "dev:web": "npm run dev --workspace=@casaops/web",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
+  },
+  "devDependencies": {
+    "prettier": "^3.6.2"
+  }
+}
